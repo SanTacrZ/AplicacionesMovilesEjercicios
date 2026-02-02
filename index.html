@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Mario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="paisaje">
+        <!-- Elementos de Fondo (Ordenados por profundidad, primero lo más atrás) -->
+        <div id="nevado" class="objeto"></div>
+        <div id="nevado2" class="objeto"></div>
+        <div id="nube" class="objeto"></div>
+        <div id="sol" class="objeto"></div>
+        <div id="arbol" class="objeto"></div>
+        <div id="arbusto" class="objeto"></div> <!-- Reemplazo de bici -->
+
+        <!-- Elementos Interactivos -->
+        <div id="bloque" class="objeto">?</div>
+        <!-- Hongo (inicialmente oculto en el bloque) -->
+        <div id="hongo" class="objeto"></div>
+
+        <!-- Personaje Mario (Imagen local) -->
+        <img id="mario" class="objeto" src="mario.png" alt="mario" width="50" height="50">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+}
+
+#paisaje {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    border: 1px solid gray;
+    background: linear-gradient(#00BFFF, #87CEEB);
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.objeto {
+    position: absolute;
+}
+
+/* --- SOL --- */
+#sol {
+    top: 45px;
+    right: 70px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ffd700, #ffa500);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    z-index: 1;
+}
+
+/* --- NUBE --- */
+#nube {
+    top: 50px;
+    left: 20px;
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50px;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+#nube::before,
+#nube::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+#nube::before {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 15px;
+}
+
+#nube::after {
+    width: 40px;
+    height: 40px;
+    top: -15px;
+    right: 15px;
+}
+
+/* --- MONTAÑAS GRANDES --- */
+#nevado,
+#nevado2 {
+    width: 0;
+    height: 0;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 350px solid #808080;
+    position: absolute;
+    bottom: -50px;
+}
+
+#nevado {
+    left: -100px;
+    z-index: 0;
+}
+
+#nevado2 {
+    right: -100px;
+    bottom: -50px;
+    z-index: 0;
+    transform: scale(1.1);
+    border-bottom-color: #696969;
+}
+
+#nevado::after,
+#nevado2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 100px solid white;
+}
+
+
+/* --- ARBOL --- */
+#arbol {
+    right: 80px;
+    bottom: 0px;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #228B22;
+}
+
+#arbol::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: #8B4513;
+    bottom: -130px;
+    left: -10px;
+}
+
+/* --- ARBUSTO --- */
+#arbusto {
+    bottom: 0px;
+    left: 350px;
+    width: 60px;
+    height: 40px;
+    background: #32CD32;
+    border-radius: 50% 50% 0 0;
+    z-index: 3;
+    box-shadow: 15px 5px 0 #228B22 inset;
+}
+
+/* --- BLOQUE MISTERIOSO --- */
+/* Top 330px */
+#bloque {
+    top: 330px;
+    left: 375px;
+    width: 50px;
+    height: 50px;
+    background: #FFD700;
+    border: 4px solid #B8860B;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bold;
+    color: #B8860B;
+    z-index: 5;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- HONGO --- */
+#hongo {
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 20px 20px 10px 10px;
+    position: absolute;
+    top: 335px;
+    /* Detras del bloque */
+    left: 380px;
+    z-index: 4;
+    display: none;
+}
+
+#hongo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 20px;
+    height: 15px;
+    background: #FFDAB9;
+}
+
+#hongo::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 white;
+    z-index: 1;
+}
+
+/* --- MARIO --- */
+#mario {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 0px;
+    left: 50px;
+    z-index: 10;
+    transition: transform 0.1s;
+    /* Soft turn */
+    transform-origin: bottom center;
+    /* Crece desde el suelo */
+}
