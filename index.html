@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado Seguro</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Inter font for a premium look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#sucursal" class="nav-link">Sucursal Virtual</a></li>
+            <li><a href="#ayuda" class="nav-link">Ayuda</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Sections -->
+    <main>
+        <section id="inicio" class="full-screen-section">
+            <h1>Bienvenido a Su Banco</h1>
+            <p>Soluciones financieras a su alcance.</p>
+        </section>
+
+        <section id="sucursal" class="full-screen-section">
+            <h2 class="section-title">Acceso Sucursal Virtual</h2>
+            <div class="caja_clave">
+                <input type="password" placeholder="Clave acá" class="clave">
+                <section id="teclado">
+                    <!-- Numeric Keys -->
+                    <input type="button" value="1" class="tecla">
+                    <input type="button" value="2" class="tecla">
+                    <input type="button" value="3" class="tecla">
+                    <input type="button" value="4" class="tecla">
+                    <input type="button" value="5" class="tecla">
+                    <input type="button" value="6" class="tecla">
+                    <input type="button" value="7" class="tecla">
+                    <input type="button" value="8" class="tecla">
+                    <input type="button" value="9" class="tecla">
+                    <input type="button" value="0" class="tecla">
+                    <!-- Action Key -->
+                    <!-- Action Keys -->
+                    <div style="display:flex; gap:10px; justify-content:center; width:100%;">
+                        <input type="button" value="Borrar" class="tecla borrar">
+                        <input type="button" value="Ingresar" class="tecla ingresar">
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="ayuda" class="full-screen-section">
+            <h2>¿Necesita Ayuda?</h2>
+            <p>Contáctenos al 0800-BANCO</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

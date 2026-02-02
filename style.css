@@ -1,0 +1,244 @@
+/* Global Styles for layout and presentation */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* User Provided Styles */
+#teclado {
+    border: 1px solid #d1d5db;
+    /* Softer grey */
+    width: 200px;
+    height: 270px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    /* Smooth corners */
+    padding-top: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on the container itself */
+#teclado:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #9ca3af;
+}
+
+.clave {
+    width: 202px;
+    /* Matching the visual width including borders */
+    height: 48px;
+    /* Slightly taller for better touch target */
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.clave:focus {
+    border-color: #2563eb;
+    /* Blue focus ring */
+}
+
+.tecla {
+    width: 60px;
+    height: 60px;
+    background: #1f2937;
+    /* Darker black/grey */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s active, background 0.2s;
+}
+
+.tecla:hover {
+    background: #374151;
+}
+
+.tecla:active {
+    transform: scale(0.95);
+}
+
+.borrar {
+    width: 90px;
+    background: #dc2626;
+    /* Red for delete */
+}
+
+.ingresar {
+    width: 90px;
+    background: #059669;
+    /* Green for enter */
+}
+
+.ingresar:hover {
+    background: #10b981;
+}
+
+.borrar:hover {
+    background: #ef4444;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111827;
+    /* Dark background */
+    color: white;
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+#navbar a:hover {
+    background-color: #374151;
+}
+
+/* Page Sections */
+body {
+    /* Reset body flex centering since we now have full page sections */
+    display: block;
+    padding-top: 60px;
+    /* Offset for fixed navbar */
+}
+
+main {
+    scroll-behavior: smooth;
+    /* Native smooth scroll fallback */
+}
+
+.full-screen-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#inicio {
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+}
+
+#inicio h1 {
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+#sucursal {
+    background-color: #f3f4f6;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #374151;
+    margin-bottom: 2rem;
+}
+
+/* Keyboard Container Adjustments */
+.caja_clave {
+    width: auto;
+    /* Let it flow in the section */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+
+    /* Adjust Navigation for mobile */
+    #navbar {
+        padding: 0.5rem 0;
+    }
+
+    #navbar ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    #navbar a {
+        padding: 0.4rem 0.6rem;
+    }
+
+    /* Adjust headings */
+    #inicio h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Keypad Adjustments */
+    .caja_clave {
+        /* Remove fixed scale if possible, or use logic to fit width */
+        width: 100%;
+        max-width: 300px;
+        /* Ensure it fits in small screens */
+    }
+
+    /* Ensure specific elements scale down if needed */
+    #teclado {
+        transform: scale(0.9);
+        /* Slight shrink for very narrow screens */
+        transform-origin: top center;
+        margin-bottom: -30px;
+        /* Compensate for scale shrinkage gap */
+    }
+}
+
+@media (max-width: 350px) {
+
+    /* Very small screens (iPhone SE, Fold) */
+    #teclado {
+        transform: scale(0.8);
+    }
+
+    #navbar ul {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
