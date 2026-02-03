@@ -23,9 +23,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-serif);
-    font-weight: normal; 
+    font-weight: normal;
 }
 
 /* Helper Class */
@@ -58,10 +60,12 @@ h1, h2, h3 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertical */
+    justify-content: center;
+    /* Center vertical */
     padding: 40px;
     padding-left: 8%;
-    padding-right: 180px; /* Space for the sidebar width */
+    padding-right: 180px;
+    /* Space for the sidebar width */
 }
 
 .logo {
@@ -69,6 +73,7 @@ h1, h2, h3 {
     top: 40px;
     left: 40px;
 }
+
 .logo img {
     width: 60px;
 }
@@ -113,12 +118,21 @@ h1, h2, h3 {
 .category span:last-child {
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    transform: rotate(180deg); /* Adjust if needed based on font orientation */
+    transform: rotate(180deg);
+    /* Adjust if needed based on font orientation */
 }
 
-.category.blue { background-color: var(--color-blue); }
-.category.red { background-color: var(--color-red); }
-.category.yellow { background-color: var(--color-yellow); }
+.category.blue {
+    background-color: var(--color-blue);
+}
+
+.category.red {
+    background-color: var(--color-red);
+}
+
+.category.yellow {
+    background-color: var(--color-yellow);
+}
 
 /* GALLERY HERO IMAGE */
 .gallery-preview {
@@ -126,6 +140,7 @@ h1, h2, h3 {
     height: 80vh;
     overflow: hidden;
 }
+
 .gallery-preview img {
     width: 100%;
     height: 100%;
@@ -226,7 +241,8 @@ section {
     grid-template-columns: 1fr 1fr;
     border: var(--border-dashed);
     margin: 80px 40px;
-    padding: 0 !important; /* Override standard padding */
+    padding: 0 !important;
+    /* Override standard padding */
 }
 
 .address-box {
@@ -258,13 +274,11 @@ section {
 .vendor-cta {
     text-align: center;
     padding: 100px 20px;
-    background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 5px,
-        #f0f0f0 5px,
-        #f0f0f0 10px
-    );
+    background-image: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 5px,
+            #f0f0f0 5px,
+            #f0f0f0 10px);
 }
 
 .vendor-cta h3 {
@@ -277,6 +291,8 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 80px 40px;
+    padding-right: 180px;
+    /* Space for the sidebar */
     border-top: var(--border-dashed);
     font-family: var(--font-sans);
     font-size: 12px;
@@ -290,6 +306,7 @@ section {
 .icon-group {
     text-align: center;
 }
+
 .icon-group span {
     font-size: 24px;
     display: block;
@@ -345,63 +362,73 @@ section {
     .categories {
         width: 60px;
     }
+
     .hero-content {
         padding-right: 80px;
     }
 }
 
 @media screen and (max-width: 768px) {
+
     /* Hero */
     .hero-container {
         flex-direction: column;
     }
+
     .categories {
         position: relative;
         width: 100%;
         height: auto;
         flex-direction: row;
     }
+
     .category {
         padding: 20px;
         flex-direction: row;
         gap: 10px;
     }
+
     .category span:last-child {
         writing-mode: horizontal-tb;
         transform: none;
     }
+
     .hero-content {
-        padding: 40px 20px; 
+        padding: 40px 20px;
     }
+
     .hero-text h1 {
         font-size: 2.5rem;
         margin-top: 60px;
     }
-    
+
     /* Intro */
     .intro-grid {
         grid-template-columns: 1fr;
     }
-    
+
     /* Events */
     .events-grid {
         grid-template-columns: 1fr;
     }
+
     .event-item {
         border-right: none;
         border-bottom: var(--border-dashed);
     }
-    
+
     /* Address */
     .address-map {
         grid-template-columns: 1fr;
         margin: 40px 20px;
     }
+
     .address-box {
         border-right: none;
         border-bottom: var(--border-dashed);
         padding: 40px;
     }
+
     .address-box h3 {
         font-size: 2rem;
     }
@@ -411,13 +438,18 @@ section {
         flex-direction: column;
         text-align: center;
         gap: 40px;
+        padding-right: 40px;
+        /* Reset from desktop fixed sidebar compensator */
     }
+
     .footer-icons {
         justify-content: center;
     }
+
     .footer-legal {
         text-align: center;
     }
+
     .footer-signup {
         margin: 0 auto;
         width: 100%;
