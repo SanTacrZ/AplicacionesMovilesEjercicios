@@ -158,6 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (!mushroomActive) {
                     mushroomActive = true;
+                    // Reset positions for respawn
+                    mushX = 380;
+                    mushY = 335;
+                    hongo.style.left = mushX + 'px';
+                    
                     hongo.style.display = 'block';
                     playSound('reveal');
 
