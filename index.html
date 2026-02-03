@@ -12,14 +12,29 @@
 
 <body>
 
-    <!-- Navigation Menu -->
-    <nav id="navbar">
-        <ul>
-            <li><a href="#inicio" class="nav-link">Inicio</a></li>
-            <li><a href="#sucursal" class="nav-link">Sucursal Virtual</a></li>
-            <li><a href="#ayuda" class="nav-link">Ayuda</a></li>
-        </ul>
-    </nav>
+    <!-- Header with Navigation -->
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🔒</span>
+                <span class="logo-text">BancoSeguro</span>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#sucursal" class="nav-link">Sucursal Virtual</a></li>
+                    <li><a href="#ayuda" class="nav-link">Ayuda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Main Content Sections -->
     <main>
@@ -59,6 +74,31 @@
             <p>Contáctenos al 0800-BANCO</p>
         </section>
     </main>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>BancoSeguro</h3>
+                <p>Protegiendo tu futuro con la mejor tecnología.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sucursal">Sucursal Virtual</a></li>
+                    <li><a href="#ayuda">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>📧 contacto@bancoseguro.com</p>
+                <p>📞 0800-BANCO</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BancoSeguro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

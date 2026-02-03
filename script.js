@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const teclado = document.getElementById('teclado');
     const teclas = document.querySelectorAll('.tecla');
 
+    let isHovering = false;
+
     function mezclarTeclado() {
         const numeros = [];
 
@@ -22,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         teclas.forEach(tecla => {
             if (tecla.dataset.originalValue) {
                 tecla.dataset.originalValue = numeros[index];
-                tecla.value = numeros[index]; // visible cuando no está en hover
+                // Si está sobre el teclado, mostrar asterisco; si no, mostrar el número
+                tecla.value = isHovering ? '*' : numeros[index];
                 index++;
             }
         });
@@ -38,17 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener for mouse entering the keypad area
     teclado.addEventListener('mouseenter', () => {
+        isHovering = true;
         teclas.forEach(tecla => {
             if (tecla.dataset.originalValue) {
                 tecla.value = '*';
-                // Add a slight animation class if we wanted, 
-                // but value swap is instant as requested.
             }
         });
     });
 
     // Event listener for mouse leaving the keypad area
     teclado.addEventListener('mouseleave', () => {
+        isHovering = false;
         teclas.forEach(tecla => {
             if (tecla.dataset.originalValue) {
                 tecla.value = tecla.dataset.originalValue;
@@ -82,6 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    if (menuToggle && navbar) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('#navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navbar.classList.remove('active');
+            });
+        });
+    }
 
     // Navigation Smooth Scroll
     document.querySelectorAll('.nav-link').forEach(anchor => {
