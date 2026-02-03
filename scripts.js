@@ -1,12 +1,10 @@
-// Este ejemplo asume que luego agregas un botón para el menú.
+// Scripts for Canal Street Market
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelector('.nav-links');
-    const menuBtn = document.createElement('button');
-    menuBtn.innerText = 'Menu';
-    menuBtn.classList.add('menu-btn');
-    document.querySelector('.navbar').prepend(menuBtn);
-
-    menuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
+    console.log('Canal Street Market Loaded');
+    
+    // Placeholder for future mobile menu functionality if needed
+    // const navLinks = document.querySelector('.nav-links');
+    // if (navLinks) {
+    //     // ... logic
+    // }
 });

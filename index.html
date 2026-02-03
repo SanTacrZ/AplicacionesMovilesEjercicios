@@ -3,45 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canal Street Market</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <main class="hero">
+    <main class="hero-container">
 
-        <!-- Logo -->
-        <header class="logo">
-            <img src="assets/logo.png" alt="CSM Logo">
-        </header>
+        <div class="hero-content">
+            <!-- Logo -->
+            <header class="logo">
+                <img src="assets/logo.png" alt="CSM Logo">
+            </header>
 
-        <!-- Texto principal -->
-        <section class="content">
-            <h1>
-                Canal Street Market is a carefully curated retail market, food hall & community space open year-round at
-                265 Canal Street.
-            </h1>
-        </section>
+            <!-- Texto principal -->
+            <section class="hero-text">
+                <h1>
+                    Canal Street Market is a carefully curated retail market, food hall & community space open
+                    year-round at 265 Canal Street.
+                </h1>
+            </section>
+        </div>
 
-        <!-- Barras laterales -->
+        <!-- Barras laterales (Fixed or absolute structure) -->
         <aside class="categories">
-
             <div class="category blue">
-                <img src="assets/kanji-food.png" class="kanji">
+                <img src="assets/kanji-food.png" alt="Food" class="kanji">
                 <span>Food</span>
             </div>
-
             <div class="category red">
-                <img src="assets/kanji-retail.png" class="kanji">
+                <img src="assets/kanji-retail.png" alt="Retail" class="kanji">
                 <span>Retail</span>
             </div>
-
             <div class="category yellow">
-                <img src="assets/kanji-community.png" class="kanji">
+                <img src="assets/kanji-community.png" alt="Community" class="kanji">
                 <span>Community</span>
             </div>
-
         </aside>
 
     </main>
@@ -51,7 +50,105 @@
         <img src="assets/space-image.png" alt="Gallery Space">
     </section>
 
+    <!-- A New Kind of Market -->
+    <section class="market-intro">
+        <h2>A New Kind<br>of Market</h2>
+        <div class="intro-grid">
+            <div class="intro-item">
+                <div class="image-wrapper">
+                    <img src="assets/space-image.png" alt="Market Image 1">
+                </div>
+                <p>Merging retail, food, art, and culture, Canal Street Market highlights top retail and design
+                    concepts, artisanal food brands, and community programming.</p>
+            </div>
+            <div class="intro-item">
+                <div class="image-wrapper">
+                    <img src="assets/space-image.png" alt="Market Image 2">
+                </div>
+                <p>Retail Market Hours:<br>Fri – Sun: 11:00AM – 7:00PM</p>
+            </div>
+            <div class="intro-item">
+                <div class="image-wrapper">
+                    <img src="assets/space-image.png" alt="Market Image 3">
+                </div>
+                <p>Food Hall Hours:<br>Mon – Sun: 11:00AM – 8:00PM</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Market Events -->
+    <section class="market-events">
+        <h2>Market<br>Events</h2>
+
+        <div class="events-grid">
+            <div class="event-item">
+                <span class="event-date">10/22</span>
+                <p class="event-desc">Small Business Retail Pop Up Weekend!</p>
+            </div>
+            <div class="event-item">
+                <span class="event-date">02/07</span>
+                <p class="event-desc">New Balance Numeral Paint</p>
+            </div>
+            <div class="event-item">
+                <span class="event-date">12/11</span>
+                <p class="event-desc">Holiday Market</p>
+            </div>
+        </div>
+        <div class="see-all-container">
+            <button class="btn-outline">see all</button>
+        </div>
+    </section>
+
+    <!-- Address / Map -->
+    <section class="address-map">
+        <div class="address-box">
+            <h3>265 Canal St.<br>New York, NY</h3>
+        </div>
+        <div class="map-box">
+            <!-- Using space image as placeholder for map -->
+            <img src="assets/space-image.png" alt="Map Location">
+        </div>
+    </section>
+
+    <!-- Vendor Call to Action -->
+    <section class="vendor-cta">
+        <h3>Interested in becoming a vendor?</h3>
+        <button class="btn-outline">click here</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-icons">
+            <div class="icon-group">
+                <span>✎</span>
+                <p>Email us</p>
+            </div>
+            <div class="icon-group">
+                <span>f</span>
+                <p>Follow us on Facebook</p>
+            </div>
+            <div class="icon-group">
+                <span>📷</span>
+                <p>Follow us on Instagram</p>
+            </div>
+        </div>
+
+        <div class="footer-signup">
+            <p>Stay up to date with our newsletter</p>
+            <div class="input-group">
+                <input type="email" placeholder="Email">
+                <button>→</button>
+            </div>
+        </div>
+
+        <div class="footer-legal">
+            <span>Copyright Canal Street Market 2019</span>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Vendor Login</a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>
