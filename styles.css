@@ -1,0 +1,100 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", serif;
+}
+
+/* Layout principal */
+.hero {
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+/* Texto principal */
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 10%;
+}
+
+.content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    max-width: 800px;
+}
+
+/* Barras */
+.categories {
+    display: flex;
+    width: 240px;
+}
+
+.category {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+/* Imagen kanji */
+.kanji {
+    width: 32px;
+}
+
+/* Texto vertical hacia abajo */
+.category span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+/* Colores */
+.blue {
+    background: #66a9e8;
+}
+
+.red {
+    background: #f04444;
+}
+
+.yellow {
+    background: #ffc400;
+}
+
+/* Bloque imagen grande */
+
+.gallery-preview {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gallery-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
