@@ -2,6 +2,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const teclado = document.getElementById('teclado');
     const teclas = document.querySelectorAll('.tecla');
 
+    function mezclarTeclado() {
+        const numeros = [];
+
+        teclas.forEach(tecla => {
+            if (tecla.dataset.originalValue) {
+                numeros.push(tecla.dataset.originalValue);
+            }
+        });
+
+        // Algoritmo Fisher-Yates (shuffle)
+        for (let i = numeros.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [numeros[i], numeros[j]] = [numeros[j], numeros[i]];
+        }
+
+        // Reasign numbers
+        let index = 0;
+        teclas.forEach(tecla => {
+            if (tecla.dataset.originalValue) {
+                tecla.dataset.originalValue = numeros[index];
+                tecla.value = numeros[index]; // visible cuando no está en hover
+                index++;
+            }
+        });
+    }
+
     // Store original values
     teclas.forEach(tecla => {
         // Only store for single digits (0-9), ignore "Borrar"
@@ -50,6 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Don't add 'Borrar' or 'Ingresar' text to display if something weird happens
                 if (val !== 'Borrar' && val !== 'Ingresar') {
                     display.value += val;
+
+                    mezclarTeclado(); // Re-mix after each number press
                 }
             }
         });
